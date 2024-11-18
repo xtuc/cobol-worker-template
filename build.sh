@@ -16,8 +16,8 @@ docker run \
   -e EM_OUT \
   -e EM_ARGS \
   -v /tmp/cobol-worker:/root/.emscripten_cache/ \
-  -v $PWD:/worker \
-  -v $PWD/build:/build \
+  -v "$PWD":/worker \
+  -v "$PWD"/build:/build \
   xtuc/cobaul \
   /worker/src/worker.cob
 
